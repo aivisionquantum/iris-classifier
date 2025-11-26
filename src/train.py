@@ -44,27 +44,27 @@ def main():
     print("Confusion Matrix:\n", cm)
 
     # 6. Plot + save confusion matrix image
-    os.makedirs("../outputs", exist_ok=True)
+    os.makedirs("outputs", exist_ok=True)
 
     plt.figure(figsize=(6, 4))
     sns.heatmap(
-        cm,
-        annot=True,
-        cmap="Blues",
-        fmt="d",
-        xticklabels=iris.target_names,
-        yticklabels=iris.target_names,
-    )
+    cm,
+    annot=True,
+    cmap="Blues",
+    fmt="d",
+    xticklabels=iris.target_names,
+    yticklabels=iris.target_names,)
     plt.xlabel("Predicted")
     plt.ylabel("Actual")
     plt.title("Confusion Matrix")
     plt.tight_layout()
-    plt.savefig("../outputs/confusion_matrix.png", dpi=300, bbox_inches="tight")
+    plt.savefig("outputs/confusion_matrix.png", dpi=300, bbox_inches="tight")
     plt.close()
 
     # 7. Save the trained model
-    joblib.dump(model, "../outputs/iris_model.joblib")
-    print("Model saved to ../outputs/iris_model.joblib")
+    joblib.dump(model, "outputs/iris_model.joblib")
+ 
+    
 
 
 if __name__ == "__main__":
