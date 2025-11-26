@@ -12,5 +12,4 @@ __pycache__/
 # Jupyter notebooks checkpoints
 .ipynb_checkpoints/
 
-# Outputs generados automáticamente
-outputs/
+
